@@ -1,0 +1,189 @@
+/*CSS de Théo*/
+/*Changement des différents background*/
+.bg-header {
+    background: url('images/bg_header.jpg')no-repeat center center  ;
+     background-size: cover;
+     
+     height: 30em;
+
+}
+.bg-about {
+    background: url('images/bg_nuage.jpg')no-repeat center center;
+    background-size: 100% 120%;
+
+}
+
+.bg-history{
+    background: url('images/bg_appareil_photo.jpg')no-repeat center center;
+    background-size: cover;
+    
+}
+
+
+.trimgblog{
+    background: url('images/1200.jpeg')no-repeat;
+    background-size: 100% 100%;
+}
+.trparableu{
+background-color: rgba(65, 255, 255, 0.4);
+
+}
+/**/
+/*modification car cela ne prenait pas toute la hauteur */
+
+@media (min-width: 1200px){
+.col-xl-3 {
+    flex: 0 0 39%;
+    max-width: none;
+}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*CSS Pour le menu*/
+#page-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#btn {
+  position: fixed;
+  z-index: 5;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  transition: right 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+#btn div {
+  width: 35px;
+  height: 2px;
+  margin-bottom: 8px;
+  background-color: #060000;
+  transition: opacity 500ms, background-color 250ms, -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms;
+  transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms, -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+#btn.active {
+  right: 15px;
+}
+#btn.active div {
+  background-color: #343838;
+}
+#btn.active #top {
+  -webkit-transform: translateY(10px) rotate(-135deg);
+          transform: translateY(10px) rotate(-135deg);
+}
+#btn.active #middle {
+  opacity: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+#btn.active #bottom {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+#box {
+  position: fixed;
+  z-index: 4;
+  overflow: auto;
+  top: 0px;
+  left: -275px;
+  width: 295px;
+  opacity: 0;
+  padding: 20px 0px;
+  height: 100%;
+  background-color: #1A1A1A;
+  color: #343838;
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+#box.active {
+  left: 0px;
+  opacity: 0.8;
+}
+#items a {
+    text-decoration:none;
+    color: white;
+}
+#items {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          color:white;
+}
+#items .item {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  transition: all 250ms;
+}
+#items .item:hover {
+  padding: 15px 45px;
+  background-color: rgba(1, 0, 0, 0.4);
+}
+
+#btn, #btn * {
+  will-change: transform;
+}
+
+#box {
+  will-change: transform, opacity;
+}
+/**/
+
+.trhistory{
+
+    color: white;
+}
+
+header {
+    color: white;
+}
+/*CSS de Alban*/
+.avbggrey{
+	background-color: #DDDDDD; /*impossible d'avoir la bonne couleur sur bootstrap pour section photo*/
+	border-top: 25px solid #DDDDDD;
+	border-bottom: 25px solid #DDDDDD;
+
+}
+
+#contact{
+	background-image: url('https://picsum.photos/458/354?image=0&blur');
+	color: white;
+	padding: 10px;
+}
+
+.avlienphoto{
+	font-size: 12px;  /*texte menu photo trop grand s'entrevauche */
+	text-align: center;
+	border-bottom: 10px solid #DDDDDD;
+}
+
+footer{
+	background: #24323B;
+	color: white;
+	padding:10px;
+}
+
+.typcn-social-facebook-circular{
+	color: #367BBC;
+}
+
+.typcn-social-twitter-circular{
+	color: #367BBC;
+}
+
+.avform-group{
+	width: 75%;
+}
